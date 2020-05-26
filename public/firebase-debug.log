@@ -1,0 +1,25 @@
+[debug] [2020-04-01T13:29:13.517Z] ----------------------------------------------------------------------
+[debug] [2020-04-01T13:29:13.519Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\DELL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-04-01T13:29:13.520Z] CLI Version:   8.0.0
+[debug] [2020-04-01T13:29:13.520Z] Platform:      win32
+[debug] [2020-04-01T13:29:13.520Z] Node Version:  v10.16.3
+[debug] [2020-04-01T13:29:13.521Z] Time:          Wed Apr 01 2020 20:29:13 GMT+0700 (Indochina Time)
+[debug] [2020-04-01T13:29:13.521Z] ----------------------------------------------------------------------
+[debug] [2020-04-01T13:29:13.521Z] 
+[debug] [2020-04-01T13:29:13.530Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-01T13:29:13.531Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Disc G\Project IoT Web\IoT Web\web-iot
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
