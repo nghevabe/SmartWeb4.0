@@ -13,12 +13,16 @@ class HomeBody extends Component{
  render(){
 
   var cardroot = {
+  width: '80%',
+  marginLeft: 'auto',
+  marginRight: 'auto',
   marginTop: '50px',  
 }
 
  var cardhead = {
 
   padding: '10px',
+  //height: '350px',
   border: '1px solid #e2e2e2',
 
   
@@ -101,11 +105,14 @@ var texter = {
           <div style={cardfoot} class="card-footer">
              <div >
 
+             <Link to="/assistant">
+
             <div style={cardbutton} type="button" class="btn btn-primary">
-         <Link to="/assistant">
             More
-         </Link>
             </div>
+
+            </Link>
+
             </div>
           </div>
 
