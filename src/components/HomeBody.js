@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import icon_assistant from '../image/bot_icon.png'
 import icon_house from '../image/house_icon.png'
 import icon_device from '../image/device_icon.png'
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 
@@ -100,7 +101,11 @@ var texter = {
           <div style={cardfoot} class="card-footer">
              <div >
 
-            <div style={cardbutton} type="button" class="btn btn-primary">More</div>
+            <div style={cardbutton} type="button" class="btn btn-primary">
+         <Link to="/assistant">
+            More
+         </Link>
+            </div>
             </div>
           </div>
 

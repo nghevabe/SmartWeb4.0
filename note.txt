@@ -16,7 +16,6 @@ constructor() {
       this.state = {
         showdata : this.displayData,
         postVal : "",
-        data : null,
        
       }
 
@@ -55,19 +54,19 @@ constructor() {
         .then(
             // handle the result
             (result) => {
-          
+
                 //this.chuoi1 = result;
-                
                  result.map(post => (
                           this.chuoi1 = post.Contend
                         ))
-                        
                        //alert(this.chuoi1);
              
 
                 this.setState({
-                    isLoaded : true,                
-                    posts : result,
+                    isLoaded : true,
+                    showdata : result,
+
+                    //posts : result
 
                 });
             },
@@ -81,12 +80,6 @@ constructor() {
             },
         )
     }
-
-    componentDidMount2() {
-    fetch("http://assistanthome.somee.com/api/assistant?request=" + this.request)
-      .then(response => response.json())
-      .then(data => this.setState({ data }));
-  }
    
   sendMessager() {
          this.displayData.push(
@@ -126,9 +119,8 @@ this.displayData.push(
 
       	this.request = this.state.postVal;
 
-      	setTimeout(this.componentDidMount, 1000);
-      
-      	setTimeout(this.BotResponse, 2000);
+      	setTimeout(this.componentDidMount, 2000);
+      	setTimeout(this.BotResponse, 6000);
       	
  
 
