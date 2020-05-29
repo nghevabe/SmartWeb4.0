@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import HouseDataCard from '../components/HouseDataCard';
 import HouseBackground from '../components/HouseBackground';
+import HouseTableDevice from '../components/HouseTableDevice';
 
 
 class HomePage extends Component{
@@ -18,6 +19,7 @@ class HomePage extends Component{
 
   <HouseBackground/>
   <HouseDataCard/>
+  <HouseTableDevice/>
   
   </div>
   );
