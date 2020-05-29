@@ -140,7 +140,11 @@ var texter = {
           </div>
             <div style={cardfoot} class="card-footer">
              <div >
+
+ <Link to="/house">
             <div style={cardbutton} type="button" class="btn btn-primary">More</div>
+ </Link>
+
             </div>
           </div>
         </div>
