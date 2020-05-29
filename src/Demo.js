@@ -10,6 +10,7 @@ import ImageIntroduce from './components/ImageIntroduce';
 import ChatUI from './components/ChatUI';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import HomePage from './components/HomePage';
+import HousePage from './components/HousePage';
 
 function Demo() {
   return (
@@ -30,7 +31,7 @@ function Demo() {
           <div>
             <Route exact path="/" component={HomePage} />
             <Route path="/assistant" component={ChatUI} />
-            <Route path="/house" component={HomeBodyImage} />
+            <Route path="/house" component={HousePage} />
           </div>
 
   <Footer/>
