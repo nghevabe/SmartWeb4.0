@@ -78,7 +78,7 @@ var button_tabletmedium_vertical = {
   border: '1px solid #008577', 
   width:'38%',
   height: '40px',
-  marginTop:'-15px',
+  marginTop:'-5px',
   marginLeft:'10px',
   marginRight:'10px',
   padding:'12px',

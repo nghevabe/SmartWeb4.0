@@ -1,8 +1,8 @@
 //import React, { Component } from 'react';
 import React, { Fragment } from 'react';
 import Media from 'react-media';
-import styles from '../cardstyle.css'; 
 import CardData from './CardData';
+import '../css/cardstyle.css';
 
 
 
@@ -25,28 +25,28 @@ var card_phone_medium_landscape = {
 }
 
 var card_tablet_medium_vertical = {
-  width: '50%',
-  height: '160px',
+  width: '70%',
+  height: '180px',
   marginTop: '-80px',
   marginBottom: '120px',
 }
 
 var card_tablet_medium_landscape = {
-  width: '50%',
+  width: '60%',
   height: '200px',
   marginTop: '-95px',
   marginBottom: '120px',
 }
 
 var card_tablet_large_landscape = {
-  width: '40%',
+  width: '50%',
   height: '200px',
   marginTop: '-100px',
   marginBottom: '120px',
 }
 
 var desktop = {
-  width: '30%',
+  width: '40%',
   height: '250px',
   marginTop: '-120px',
   marginBottom: '50px',
@@ -108,7 +108,8 @@ var desktop = {
 
               {matches.desktop
                && 
-               <div style={desktop} className="cardHome">  
+               <div style={desktop} class="cardHome">  
+
                  <CardData/>
                </div>
 

@@ -50,6 +50,17 @@ class HouseTableDevice extends React.Component{
 
      </div>
 
+     <div class="column">
+
+       <CardHouseDevice/>
+
+     </div>
+
+     <div class="column">
+
+       <CardHouseDevice/>
+
+     </div>
 
 
 </div>

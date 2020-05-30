@@ -6,15 +6,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 20%;
-  padding: 0 10px;
-}
+
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -28,8 +26,10 @@ body {
 
 .column {
   float: left;
-  margin-left: 50px;
+  width: 20%;
+  margin-left: 4%;
   padding: 0 10px;
+  
 }
 
 
@@ -39,16 +39,51 @@ body {
 
  .column {
   float: left;
-  margin-left: 50px;
+  width: 20%;
+  margin-left: 4%;
   padding: 0 10px;
 }
 
+}
+
+@media screen and (max-width: 801px) {
+
+ .column {
+  float: left;
+  width: 30%;
+  margin-left: 14%;
+  padding: 0 10px;
+}
+
+}
+
+
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
+    width: 60%;
     display: block;
+    margin-left: 20%;
     margin-bottom: 20px;
   }
+
+  .row {
+  margin-top: -60px;
+
+}
+
+}
+
+@media screen and (max-width: 481px) {
+
+ .column {
+  float: left;
+  margin-left: 20%;
+  padding: 0 10px;
+}
+
+  .row {
+  margin-top: 0px;
+
 }
 
 }
