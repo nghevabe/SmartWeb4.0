@@ -226,7 +226,6 @@ render() {
   </div>
 
   <div className="send_message">
-    <div className="icon"></div>
     <div type="submit" className="text" onClick={this.RequestBot}   >Send</div>
   </div>
 

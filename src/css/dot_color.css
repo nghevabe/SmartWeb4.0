@@ -1,0 +1,62 @@
+
+.box_color{
+
+ margin-left: 30%;
+
+}
+
+ /* background-color: #4CAF50;  Green */
+
+.dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 100px;
+  margin-left: 2%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
+.red{
+ background-color: #f15f66;
+}
+
+.green{
+  background-color: #51ffa9
+}
+
+.blue{
+ background-color: #3380cb;
+}
+
+.yellow{
+ background-color: #ffba51;
+}
+
+.violet{
+ background-color: #cc33ff;
+}
+
+.aqua{
+ background-color: #a8d4ff;
+}
+
+
+
+.dot:hover {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.dot:focus {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

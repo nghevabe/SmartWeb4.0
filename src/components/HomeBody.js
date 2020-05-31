@@ -13,7 +13,7 @@ class HomeBody extends Component{
  render(){
 
   var cardroot = {
-  width: '80%',
+  width: '90%',
   marginLeft: 'auto',
   marginRight: 'auto',
   marginTop: '50px',  
