@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import HouseBackground from './HouseBackground';
+import DeviceControllerCard from './DeviceControllerCard';
 import '../css/dot_color.css';
 
 class HouseDeviceDetailPage extends Component{
@@ -10,6 +12,10 @@ class HouseDeviceDetailPage extends Component{
 
   return (
    
+   <div class="box_root">
+   
+   <DeviceControllerCard/>
+
   <div class="box_color">
 
   <button class="dot red"></button>
@@ -27,6 +33,8 @@ class HouseDeviceDetailPage extends Component{
   <button class="dot"></button>
   
   </div>
+  </div>
+
   );
  }
 
