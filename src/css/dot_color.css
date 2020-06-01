@@ -12,8 +12,9 @@
 }
 
   .box_color{
- width: 350px;
- margin-top: 60px;
+ margin-top: 30px;
+ margin-left: auto;
+ margin-right: auto;
  
 }
 
@@ -65,10 +66,8 @@
 
 @media screen and (min-width: 1025px) {
 
-  .box_color{
-
- margin-left: 37%;
-
+ .box_color{
+ max-width: 350px;
 }
 
 .dot {
@@ -93,9 +92,7 @@
 @media screen and (max-width: 1024px) {
 
   .box_color{
-
- margin-left: 30%;
-
+ max-width: 350px;
 }
 
 .dot {
@@ -120,9 +117,7 @@
 @media screen and (max-width: 801px) {
 
   .box_color{
-
- margin-left: 30%;
-
+ max-width: 350px;
 }
 
 .dot {
@@ -148,9 +143,7 @@
 @media screen and (max-width: 600px) {
 
   .box_color{
-
- margin-left: 30%;
-
+ max-width: 350px;
 }
 
 .dot {
@@ -174,10 +167,16 @@
 
 @media screen and (max-width: 481px) {
 
-  .box_color{
+ .box_color{
+ max-width: 250px;
+}
 
- margin-left: 3%;
+.box_color{
 
+ margin-left: auto;
+ margin-right: auto; 
+
+ 
 }
 
 .dot {
@@ -198,3 +197,4 @@
 }
 
 }
+
