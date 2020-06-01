@@ -55,111 +55,16 @@
 
 
   .card_house_device {
-    width: 100%;
-    margin-left: 0%;
-    margin-top: 20%;
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 20%;
    
   }
 
   .card_house_device_controller {
-  width: 25%;
-  height: 250px;
-  margin-top: 8%;
-  }
-
- #card_button_left{
-
-  width:25%;
-  height: 50px;
-  margin-top:50px;
-  margin-right:50px;
-
-  }
-
-  #card_button_right{
-
-  width: 25%;
-  height: 50px;
-  margin-top: 50px;
-
-  }
-
-}
-
-@media screen and (max-width: 1024px) {
-
-  .card_house_device {
-    width: 100%;
-    margin-left: 0%;
-    margin-top: 20%;
-    
-  
-  }
-
-   .card_house_device_controller {
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-top: 10%;
-   
-  }
-
-}
-
-@media screen and (max-width: 801px) {
-
-  .card_house_device {
-    width: 100%;
-    margin-left: 0%;
-
-   
-  }
-
-   .card_house_device_controller {
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-top: 10%;
-   
-  }
-
-}
-
-
-@media screen and (max-width: 601px) {
-
-  .card_house_device {
-    width: 100%;
-    margin-left: 0%;
-    
-  
-  }
-
-   .card_house_device_controller {
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-top: 10%;
-   
-  }
-
-}
-
-@media screen and (max-width: 481px) {
-
-  .card_house_device {
-    width: 100%;
-    margin-left: 0%;
-    
-  }
-
-   .card_house_device_controller {
-    width: 80%;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto; 
-    margin-top: 10%;
-   
+  width: 420px;
+  height: 200px;
+  margin-top: 10%;
   }
 
   #card_button_left{
@@ -176,6 +81,117 @@
   width: 25%;
   height: 50px;
   margin-top: 0px;
+
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  .card_house_device {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 20%;
+    
+  
+  }
+
+   .card_house_device_controller {
+    width: 360px;
+    height: 160px;
+    margin-top: 15%;
+   
+  }
+
+    #card_button_left{
+
+  width:25%;
+  height: 50px;
+  margin-top:-25px;
+  margin-right:50px;
+
+  }
+
+  #card_button_right{
+
+  width: 25%;
+  height: 50px;
+  margin-top: -25px;
+
+  }
+
+}
+
+@media screen and (max-width: 801px) {
+
+  .card_house_device {
+    width: 100%;
+    margin-left: 0%;
+
+   
+  }
+
+   .card_house_device_controller {
+    width: 320px;
+    height: 160px;
+    margin-top: 18%;
+   
+   
+  }
+
+}
+
+
+@media screen and (max-width: 601px) {
+
+  .card_house_device {
+    width: 100%;
+    margin-left: 0%;
+    
+  
+  }
+
+   .card_house_device_controller {
+    width: 320px;
+    height: 160px;
+    margin-top: 25%;
+    
+  }
+
+}
+
+@media screen and (max-width: 481px) {
+
+  .card_house_device {
+    width: 100%;
+    margin-left: 0%;
+    
+  }
+
+   .card_house_device_controller {
+    width: 80%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 35%;
+    
+   
+  }
+
+  #card_button_left{
+
+  width:25%;
+  height: 50px;
+  margin-top:-50px;
+  margin-right:50px;
+
+  }
+
+  #card_button_right{
+
+  width: 25%;
+  height: 50px;
+  margin-top: -50px;
 
   }
 

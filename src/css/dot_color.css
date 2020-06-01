@@ -67,24 +67,25 @@
 @media screen and (min-width: 1025px) {
 
  .box_color{
- max-width: 350px;
+ max-width: 325px;
+
 }
 
 .dot {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   margin-left: 2%;
 
 }
 
 .dot:hover {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
 }
 
 .dot:focus {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
 }
 
 }
@@ -92,24 +93,24 @@
 @media screen and (max-width: 1024px) {
 
   .box_color{
- max-width: 350px;
+ max-width: 300px;
 }
 
 .dot {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   margin-left: 2%;
 
 }
 
 .dot:hover {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
 }
 
 .dot:focus {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
 }
 
 }
@@ -117,24 +118,25 @@
 @media screen and (max-width: 801px) {
 
   .box_color{
- max-width: 350px;
+ max-width: 270px;
+
 }
 
 .dot {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   margin-left: 2%;
 
 }
 
 .dot:hover {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .dot:focus {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 }
@@ -143,24 +145,24 @@
 @media screen and (max-width: 600px) {
 
   .box_color{
- max-width: 350px;
+ max-width: 240px;
 }
 
 .dot {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
   margin-left: 2%;
-
+  
 }
 
 .dot:hover {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
 }
 
 .dot:focus {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
 }
 
 }
@@ -168,7 +170,7 @@
 @media screen and (max-width: 481px) {
 
  .box_color{
- max-width: 250px;
+ max-width: 270px;
 }
 
 .box_color{
@@ -180,20 +182,20 @@
 }
 
 .dot {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   margin-left: 2%;
 
 }
 
 .dot:hover {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
 }
 
 .dot:focus {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
 }
 
 }
