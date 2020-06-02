@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import Header from '../Commons/Header';
 
-class HomeBackground extends Component{
+class HouseBackground extends Component{
 
  
 
  render(){
 
 var bodyhead = {
-  height: '92vh',
+  height: '30vh',
   width: 'auto',
   marginTop: '-20px',
   marginLeft: '1px',
@@ -40,4 +40,4 @@ var bodyhead = {
 
 }
 
-export default HomeBackground;
+export default HouseBackground;

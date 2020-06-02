@@ -1,23 +1,49 @@
 //import React, { Component } from 'react';
 import React, { Fragment } from 'react';
 import Media from 'react-media';
-import styles from '../cardstyle.css'; 
-import home_image from '../image/home_image.png'
+import styles from '../../cardstyle.css'; 
+import home_image from '../../image/home_image.png'
 
 
-class CardData extends React.Component{
+class CardBody extends React.Component{
 
  render() {
 
 
- 
+  var card_phone_medium_landscape = {
+  width: '80%',
+  height: '150px',
+  marginTop: '-75px',
+  marginBottom: '10px',
+}
+
+var card_tablet_medium_vertical = {
+  width: '50%',
+  height: '160px',
+  marginTop: '-80px',
+  marginBottom: '120px',
+}
+
+var card_tablet_medium_landscape = {
+  width: '50%',
+  height: '200px',
+  marginTop: '-95px',
+  marginBottom: '120px',
+}
+
+var card_tablet_large_landscape = {
+  width: '40%',
+  height: '200px',
+  marginTop: '-100px',
+  marginBottom: '120px',
+}
 
 var desktop_block_up = {
   width: '100%',
   height: '120px',
   textAlign: 'center',
   paddingTop: '10px',
-  color: '#737373',
+  color: '#008577',
   
 }
 
@@ -54,69 +80,117 @@ var button_resister_phonemedium_vertical = {
 
 //
 
-
-
 //
 
-var button_phonemedium_landscape = {
-  backgroundColor: "white",
-  color:'#008577', 
-  border: '1px solid #008577', 
-  width:'38%',
+var button_login_phonemedium_landscape = {
+  backgroundColor: "#008577", 
+  width:'35%',
   height: '40px',
-  marginTop:'-25px',
-  marginLeft:'10px',
-  marginRight:'10px',
-  padding:'12px',
+  marginTop:'-30px',
+  marginRight:'50px',
+  textAlign: 'center',
+  padding:'8px',
+}
+
+
+var button_resister_phonemedium_landscape = {
+  backgroundColor: "white",
+  color:'black', 
+  border: '1px solid black', 
+  width:'35%',
+  height: '40px',
+  marginTop:'-30px',
+  padding:'8px',
 }
 
 //
 
-var button_tabletmedium_vertical = {
-  backgroundColor: "white",
-  color:'#008577', 
-  border: '1px solid #008577', 
-  width:'38%',
+
+//
+
+var button_login_tabletmedium_vertical = {
+  backgroundColor: "#008577", 
+  width:'35%',
   height: '40px',
-  marginTop:'-5px',
-  marginLeft:'10px',
-  marginRight:'10px',
-  padding:'12px',
+  marginTop:'-10px',
+  marginRight:'50px',
+  textAlign: 'center',
+  padding:'8px',
 }
 
-var button_tabletmedium_landscape = {
+
+var button_resister_tabletmedium_vertical = {
   backgroundColor: "white",
-  color:'#008577', 
-  border: '1px solid #008577', 
-  width:'38%',
+  color:'black', 
+  border: '1px solid black', 
+  width:'35%',
+  height: '40px',
+  marginTop:'-10px',
+  padding:'8px',
+}
+
+//
+
+var button_login_tabletmedium_landscape = {
+  backgroundColor: "#008577", 
+  width:'35%',
   height: '40px',
   marginTop:'20px',
-  marginLeft:'10px',
-  marginRight:'10px',
-  padding:'12px',
+  marginRight:'50px',
+  textAlign: 'center',
+  padding:'8px',
 }
 
-var button_tabletlarge_landscape = {
+
+var button_resister_tabletmedium_landscape = {
   backgroundColor: "white",
-  color:'#008577', 
-  border: '1px solid #008577', 
-  width:'38%',
-  height: '50px',
-  marginTop:'0px',
-  marginLeft:'10px',
-  marginRight:'10px',
-  padding:'12px',
+  color:'black', 
+  border: '1px solid black', 
+  width:'35%',
+  height: '40px',
+  marginTop:'20px',
+  padding:'8px',
 }
 
-var button_desktop = {
+var button_login_tabletlarge_landscape = {
+  backgroundColor: "#008577", 
+  width:'35%',
+  height: '40px',
+  marginTop:'20px',
+  marginRight:'50px',
+  textAlign: 'center',
+  padding:'8px',
+}
+
+
+var button_resister_tabletlarge_landscape = {
   backgroundColor: "white",
-  color:'#008577', 
-  border: '1px solid #008577', 
+  color:'black', 
+  border: '1px solid black', 
+  width:'35%',
+  height: '40px',
+  marginTop:'20px',
+  padding:'8px',
+}
+
+
+var button_login_desktop = {
+  backgroundColor: "#008577", 
   width:'38%',
   height: '50px',
   marginTop:'50px',
-  marginLeft:'10px',
-  marginRight:'10px',
+  marginRight:'50px',
+  textAlign: 'center',
+  padding:'12px',
+}
+
+var button_resister_desktop = {
+  backgroundColor: "white",
+  color:'black', 
+  border: '1px solid black', 
+  width:'38%',
+  height: '50px',
+  marginTop:'50px',
   padding:'12px',
 }
 
@@ -160,15 +234,13 @@ var button_desktop = {
                 <div >  
                   <div style={desktop_block_up} >
 
-                       <font  size="3">Temperature: 18*C</font>
-                      <br></br>
-                      <font  size="3">Air Dirty: 20%</font>
+                      <font  size="4">Welcome Iot Smart Web</font>
 
                  </div>
                  <div style={desktop_block_down}>
 
-                  <div type="button" style={button_phonemedium_landscape } class="btn btn-primary">Scenario</div> 
-                  <div type="button" style={button_phonemedium_landscape } class="btn btn-primary">Setup</div> 
+                  <div type="button" style={button_login_phonemedium_landscape } class="btn btn-primary">Login</div> 
+                  <div type="button" style={button_resister_phonemedium_landscape } class="btn btn-primary">Register</div> 
 
                   </div>
                </div>
@@ -181,15 +253,13 @@ var button_desktop = {
                 <div >  
                   <div style={desktop_block_up} >
 
-                      <font  size="4">Temperature: 18*C</font>
-                      <br></br>
-                      <font  size="4">Air Dirty: 20%</font>
+                      <font  size="4">Welcome Iot Smart Web</font>
 
                  </div>
                  <div style={desktop_block_down}>
 
-                  <div type="button" style={button_tabletmedium_vertical } class="btn btn-primary">Scenario</div> 
-                  <div type="button" style={button_tabletmedium_vertical } class="btn btn-primary">Setup</div> 
+                  <div type="button" style={button_login_tabletmedium_vertical } class="btn btn-primary">Login</div> 
+                  <div type="button" style={button_resister_tabletmedium_vertical } class="btn btn-primary">Register</div> 
 
                   </div>
                </div>
@@ -202,15 +272,13 @@ var button_desktop = {
                  <div >  
                   <div style={desktop_block_up} >
 
-                      <font  size="4">Temperature: 18*C</font>
-                      <br></br>
-                      <font  size="4">Air Dirty: 20%</font>
+                      <font  size="5">Welcome Iot Smart Web</font>
 
                  </div>
                  <div style={desktop_block_down}>
 
-                  <div type="button" style={button_tabletmedium_landscape } class="btn btn-primary">Scenario</div> 
-                  <div type="button" style={button_tabletmedium_landscape } class="btn btn-primary">Setup</div> 
+                  <div type="button" style={button_login_tabletmedium_landscape } class="btn btn-primary">Login</div> 
+                  <div type="button" style={button_resister_tabletmedium_landscape } class="btn btn-primary">Register</div> 
 
                   </div>
                </div>
@@ -221,15 +289,13 @@ var button_desktop = {
                <div >  
                   <div style={desktop_block_up} >
 
-                      <font  size="5">Temperature: 18*C</font>
-                      <br></br>
-                      <font  size="5">Air Dirty: 20%</font>
+                      <font  size="5">Welcome Iot Smart Web</font>
 
                  </div>
                  <div style={desktop_block_down}>
 
-                  <div type="button" style={button_tabletlarge_landscape } class="btn btn-primary">Scenario</div> 
-                  <div type="button" style={button_tabletlarge_landscape } class="btn btn-primary">Setup</div> 
+                  <div type="button" style={button_login_tabletlarge_landscape } class="btn btn-primary">Login</div> 
+                  <div type="button" style={button_resister_tabletlarge_landscape } class="btn btn-primary">Register</div> 
 
                   </div>
                </div>
@@ -242,15 +308,13 @@ var button_desktop = {
                <div >  
                   <div style={desktop_block_up} >
 
-                      <font  size="5">Temperature: 18*C</font>
-                      <br></br>
-                      <font  size="5">Air Dirty: 20%</font>
+                      <font  size="5">Welcome Iot Smart Web</font>
 
                  </div>
                  <div style={desktop_block_down}>
 
-                  <div type="button" style={button_desktop} class="btn btn-primary">Scenario</div> 
-                  <div type="button" style={button_desktop} class="btn btn-primary">Setup</div> 
+                  <div type="button" style={button_login_desktop} class="btn btn-primary">Login</div> 
+                  <div type="button" style={button_resister_desktop} class="btn btn-primary">Register</div> 
 
                   </div>
                </div>
@@ -268,4 +332,4 @@ var button_desktop = {
 
 }
 
-export default CardData;
+export default CardBody;

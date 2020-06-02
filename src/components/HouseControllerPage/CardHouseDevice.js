@@ -1,12 +1,12 @@
 //import React, { Component } from 'react';
 import React, { Fragment } from 'react';
 import Media from 'react-media';
-import styles from '../cardstyle.css'; 
-import '../css/card_house_device.css';
-import img_avatar_card from '../image/img_avatar_card.png'
-import img_led_icon from '../image/led_icon.png'
+import styles from '../../css/cardstyle.css'; 
+import '../../css/card_house_device.css';
+import img_avatar_card from '../../image/img_avatar_card.png'
+import img_led_icon from '../../image/led_icon.png'
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import HouseDeviceDetailPage from '../components/HouseDeviceDetailPage';
+import HouseDeviceDetailPage from './HouseDeviceDetailPage';
 
 
 

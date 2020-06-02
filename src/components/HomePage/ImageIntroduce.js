@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Media from 'react-media';
-import introduce_image from '../image/introduce_image.png';
+import introduce_image from '../../image/introduce_image.png';
 
 class ImageIntroduce extends React.Component{
 

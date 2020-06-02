@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import HouseBackground from './HouseBackground';
 import DeviceControllerCard from './DeviceControllerCard';
-import '../css/dot_color.css';
+import '../../css/dot_color.css';
 
 class HouseDeviceDetailPage extends Component{
 

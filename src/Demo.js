@@ -1,17 +1,17 @@
 import React from 'react';
-import HomeBackground from './components/HomeBackground';
-import HomeCardview from './components/HomeCardview';
-import Header from './components/Header';
-import HomeBody from './components/HomeBody';
-import Footer from './components/Footer';
-import HomeBodyImage from './components/HomeBodyImage';
-import CardBody from './components/CardBody';
-import ImageIntroduce from './components/ImageIntroduce';
-import ChatUI from './components/ChatUI';
+import HomeBackground from './components/HomePage/HomeBackground';
+import HomeCardview from './components/HomePage/HomeCardview';
+import Header from './components/Commons/Header';
+import HomeBody from './components/HomePage/HomeBody';
+import Footer from './components/Commons/Footer';
+import HomeBodyImage from './components/HomePage/HomeBodyImage';
+import CardBody from './components/HomePage/CardBody';
+import ImageIntroduce from './components/HomePage/ImageIntroduce';
+import ChatUI from './components/AssistantPage/ChatUI';
 import { BrowserRouter, Route, Link } from "react-router-dom";
-import HomePage from './components/HomePage';
-import HousePage from './components/HousePage';
-import HouseDeviceDetailPage from './components/HouseDeviceDetailPage';
+import HomePage from './components/HomePage/HomePage';
+import HousePage from './components/HouseControllerPage/HousePage';
+import HouseDeviceDetailPage from './components/HouseControllerPage/HouseDeviceDetailPage';
 
 function Demo() {
   return (

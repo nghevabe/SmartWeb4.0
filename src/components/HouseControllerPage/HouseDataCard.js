@@ -1,12 +1,12 @@
 //import React, { Component } from 'react';
 import React, { Fragment } from 'react';
 import Media from 'react-media';
-import styles from '../cardstyle.css'; 
-import CardBody from './CardBody';
+import CardData from './CardData';
+import '../../css/cardstyle.css';
 
 
 
-class HomeCardview extends React.Component{
+class HouseDataCard extends React.Component{
 
  render() {
 
@@ -25,21 +25,21 @@ var card_phone_medium_landscape = {
 }
 
 var card_tablet_medium_vertical = {
-  width: '50%',
-  height: '160px',
+  width: '70%',
+  height: '180px',
   marginTop: '-80px',
   marginBottom: '120px',
 }
 
 var card_tablet_medium_landscape = {
-  width: '50%',
+  width: '60%',
   height: '200px',
   marginTop: '-95px',
   marginBottom: '120px',
 }
 
 var card_tablet_large_landscape = {
-  width: '40%',
+  width: '50%',
   height: '200px',
   marginTop: '-100px',
   marginBottom: '120px',
@@ -69,13 +69,13 @@ var desktop = {
               {matches.phone_medium_vertical
                && 
                 <div style={card_phone_medium_vertical} className="cardHome">  
-               <CardBody/>
+               <CardData/>
                </div>
              }
               {matches.phone_medium_landscape
                && 
                <div style={card_phone_medium_landscape} className="cardHome">  
-               <CardBody/>
+               <CardData/>
                </div>
 
              }
@@ -84,7 +84,7 @@ var desktop = {
               {matches.tablet_medium_vertical
                && 
                 <div style={card_tablet_medium_vertical} className="cardHome">  
-                <CardBody/>
+                <CardData/>
                 </div>
 
              }
@@ -93,14 +93,14 @@ var desktop = {
               {matches.tablet_medium_landscape
                && 
                 <div style={card_tablet_medium_landscape} className="cardHome">  
-              <CardBody/>
+              <CardData/>
                 </div>
              }
 
               {matches.tablet_large_landscape
                &&
                <div style={card_tablet_large_landscape} className="cardHome">  
-             <CardBody/>
+             <CardData/>
                </div>
 
               }
@@ -108,8 +108,9 @@ var desktop = {
 
               {matches.desktop
                && 
-               <div style={desktop} className="cardHome">  
-                 <CardBody/>
+               <div style={desktop} class="cardHome">  
+
+                 <CardData/>
                </div>
 
              }
@@ -123,4 +124,4 @@ var desktop = {
 
 }
 
-export default HomeCardview;
+export default HouseDataCard;

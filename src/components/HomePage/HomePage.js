@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 
-import HomeBackground from '../components/HomeBackground';
-import HomeBody from '../components/HomeBody';
-import HomeBodyImage from '../components/HomeBodyImage';
-import ImageIntroduce from '../components/ImageIntroduce';
+import HomeBackground from './HomeBackground';
+import HomeBody from './HomeBody';
+import HomeBodyImage from './HomeBodyImage';
+import ImageIntroduce from './ImageIntroduce';
 
 class HomePage extends Component{
 

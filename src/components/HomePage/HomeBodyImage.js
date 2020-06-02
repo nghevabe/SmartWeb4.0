@@ -1,8 +1,8 @@
 //import React, { Component } from 'react';
 import React, { Fragment } from 'react';
 import Media from 'react-media';
-import styles from '../cardstyle.css'; 
-import home_image from '../image/home_image.png'
+import styles from '../../css/cardstyle.css'; 
+import home_image from '../../image/home_image.png'
 
 class HomeBodyImage extends React.Component{
 

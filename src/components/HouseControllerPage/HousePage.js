@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 
-import HouseDataCard from '../components/HouseDataCard';
-import HouseBackground from '../components/HouseBackground';
-import HouseTableDevice from '../components/HouseTableDevice';
+import HouseDataCard from './HouseDataCard';
+import HouseBackground from './HouseBackground';
+import HouseTableDevice from './HouseTableDevice';
 
 
 class HomePage extends Component{

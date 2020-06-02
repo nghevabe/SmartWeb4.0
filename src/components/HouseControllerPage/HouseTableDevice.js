@@ -1,10 +1,10 @@
 //import React, { Component } from 'react';
 import React, { Fragment } from 'react';
 import Media from 'react-media';
-import styles from '../cardstyle.css'; 
+import styles from '../../css/cardstyle.css'; 
 import CardData from './CardData';
 import CardHouseDevice from './CardHouseDevice';
-import '../css/table_item.css';
+import '../../css/table_item.css';
 
 
 

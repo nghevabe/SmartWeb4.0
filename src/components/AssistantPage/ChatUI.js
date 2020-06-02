@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../css/chat_css.css';
-import icon_assistant from '../image/qoobee.png'
+import '../../css/chat_css.css';
+import icon_assistant from '../../image/qoobee.png'
 import $ from 'jquery';
 
 
