@@ -11,12 +11,16 @@ class HouseDeviceDetailPage extends Component{
 
 
   return (
+
+    <div>
    
    <div class="box_root">
    
-   <DeviceControllerCard/>
+   
 
   <div class="box_color">
+
+
 
   <button class="dot red"></button>
 
@@ -33,6 +37,10 @@ class HouseDeviceDetailPage extends Component{
   <button class="dot"></button>
   
   </div>
+  </div>
+
+  <DeviceControllerCard/>
+
   </div>
 
   );
