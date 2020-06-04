@@ -56,13 +56,13 @@ constructor() {
             // handle the result
             (result) => {
           
-                //this.chuoi1 = result;
-                
+               
+                /*
                  result.map(post => (
                           this.chuoi1 = post.Contend
                         ))
-                        
-                       //alert(this.chuoi1);
+                        */
+                      
              
 
                 this.setState({
@@ -104,6 +104,15 @@ constructor() {
       }
 
       BotResponse() {
+ 
+   {
+
+      this.state.posts.map(post => (
+                          this.chuoi1 = post.Contend
+                        ))
+
+   }
+
 this.displayData.push(
 
          	<div>
