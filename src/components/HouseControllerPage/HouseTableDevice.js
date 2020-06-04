@@ -10,6 +10,21 @@ import '../../css/table_item.css';
 
 class HouseTableDevice extends React.Component{
 
+   constructor(props) {
+    super(props);
+ 
+    this.state = {
+     
+        lstDevice: [        
+  { nodeId: 1, name: "Bed Room Light", type: "light" },        
+  { nodeId: 2, name: "Living Room Light", type: "light" },        
+  { nodeId: 3, name: "Kitchen Light", type: "light" }, 
+  { nodeId: 4, name: "Led Light", type: "fan" }      
+],
+
+    };
+  }
+
  render() {
 
 
@@ -19,12 +34,25 @@ class HouseTableDevice extends React.Component{
     return (
      
       
-
+ 
 
 
 <div class="row">
 
-     <div class="column">
+    {this.state.lstDevice.map(item => (
+
+             <div class="column">
+             
+
+                  <CardHouseDevice name_device={item.name} type_device={item.type}/>
+
+            </div>
+
+          ))}
+   
+
+{/* 
+   <div class="column">
 
        <CardHouseDevice/>
 
@@ -61,7 +89,7 @@ class HouseTableDevice extends React.Component{
        <CardHouseDevice/>
 
      </div>
-
+*/}  
 
 </div>
 
