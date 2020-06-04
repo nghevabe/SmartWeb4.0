@@ -19,7 +19,10 @@ class HouseTableDevice extends React.Component{
   { nodeId: 1, name: "Bed Room Light", type: "light" },        
   { nodeId: 2, name: "Living Room Light", type: "light" },        
   { nodeId: 3, name: "Kitchen Light", type: "light" }, 
-  { nodeId: 4, name: "Led Light", type: "fan" }      
+  { nodeId: 4, name: "Bed Room Fan", type: "fan" },   
+  { nodeId: 5, name: "Air System Fan", type: "fan" },  
+  { nodeId: 7, name: "Electro Glass", type: "glass" },  
+  { nodeId: 8, name: "Door", type: "door" }        
 ],
 
     };
