@@ -46,8 +46,7 @@ class HouseTableDevice extends React.Component{
 
              <div class="column">
              
-
-                  <CardHouseDevice name_device={item.name} type_device={item.type}/>
+                  <CardHouseDevice id_device={item.nodeId} name_device={item.name} type_device={item.type}/>
 
             </div>
 
