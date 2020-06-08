@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import '../../css/chat_css.css';
 import icon_assistant from '../../image/qoobee.png'
-import $ from 'jquery';
-
 
 class ChatUI extends Component{
 
@@ -56,15 +54,6 @@ constructor() {
             // handle the result
             (result) => {
           
-               
-                /*
-                 result.map(post => (
-                          this.chuoi1 = post.Contend
-                        ))
-                        */
-                      
-             
-
                 this.setState({
                     isLoaded : true,                
                     posts : result,
@@ -132,16 +121,9 @@ this.displayData.push(
 
       RequestBot() {
         this.sendMessager();
-
       	this.request = this.state.postVal;
-
       	setTimeout(this.componentDidMount, 1000);
-      
       	setTimeout(this.BotResponse, 2000);
-      	
- 
-
-
       }
 
    Responser() {
@@ -168,42 +150,9 @@ this.displayData.push(
       });
 }
 
-/*
-
-render() {
-        const {error, isLoaded, posts} = this.state;
-
-        if(error){
-            return <div>Error in loading</div>
-        }else if (!isLoaded) {
-            return <div>Loading ...</div>
-        }else{
-            return(
-                <div>
-                    <ol>
-                    {
-                        posts.map(post => (
-                            <li key={post.id} align="start">
-                                <div>
-                                    <p>{post.title}</p>
-                                    <p>{post.body}</p>
-                                </div>
-                            </li>
-                        ))
-                    }
-                    </ol>
-                </div>
-            );
-        }    
-    }
-
-*/
 
  render(){
 
-
-
- 
   return (
    
    <div>
