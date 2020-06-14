@@ -97,7 +97,7 @@ var texter = {
            </div>
 
            <div style={texter}>
-             <p class="card-text"> Support Vietnamese language, Command to control electric device in your house. Look for information. And many other features. </p>
+             <p class="card-text"> Support Vietnamese language, Command to control electric device in your house. Look for information, play media. And many other features. </p>
            </div>
 
           </div>

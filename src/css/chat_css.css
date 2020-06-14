@@ -9,7 +9,6 @@ body {
 
 .chat_window {
   
- 
   width: 90%;
   margin:auto;
   height: 750px;
@@ -154,9 +153,10 @@ body {
   height: 50px;
   border-radius: 25px;
   border: 1px solid #bcbdc0;
-  width: calc(100% - 160px);
+  width: calc(100% - 190px);
   position: relative;
   padding: 0 20px;
+   
 }
 .bottom_wrapper .message_input_wrapper .message_input {
   border: none;
@@ -165,11 +165,14 @@ body {
   width: calc(100% - 40px);
   position: absolute;
   outline-width: 0;
-  color: gray;
+
+  
 }
+
 .bottom_wrapper .send_message {
-  width: 140px;
+  width: 120px;
   height: 50px;
+  margin-left: 10px;
   display: inline-block;
   border-radius: 50px;
   background-color: #008577;
@@ -180,6 +183,20 @@ body {
   text-align: center;
   float: right;
 }
+
+.btn_voice{
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+  display: inline-block;
+  float: right;
+  
+}
+
 .bottom_wrapper .send_message:hover {
   color: #008577;
   background-color: #fff;

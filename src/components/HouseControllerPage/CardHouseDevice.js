@@ -20,7 +20,7 @@ class CardHouseDevice extends React.Component{
 
     return (
      
-<Link to={"housedetaildevice?id="+this.props.id_device+"&name="+this.props.name_device+"&type="+this.props.type_device}>
+<Link to={"house-detail-device?id="+this.props.id_device+"&name="+this.props.name_device+"&type="+this.props.type_device}>
 <div class="card_house_device">
  
 

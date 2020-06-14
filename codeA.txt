@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import '../../css/chat_css.css';
 import icon_assistant from '../../image/qoobee.png'
-import icon_voice from '../../image/voice_icon.png'
 
 class ChatUI extends Component{
-
+static tts = "Linh Tran";
 constructor() {
       super();
 
       this.displayData = [];
       this.chuoi1 = "";
       this.request = "";
-      this.tts2 = "ABC";
-      this.meMessage = "";
+      this.voicetxt = "";
+
 
       this.state = {
         showdata : this.displayData,
@@ -26,10 +25,11 @@ constructor() {
       this.Responser = this.Responser.bind(this);
       this.BotResponse = this.BotResponse.bind(this);
 
-      this.startDictation = this.startDictation.bind(this);
-      this.VoiceBot = this.VoiceBot.bind(this);
+    
       this.RequestBot = this.RequestBot.bind(this);
       this.componentDidMount = this.componentDidMount.bind(this);
+      this.startDictation = this.startDictation.bind(this);
+      
       
       
       this.handleChange = this.handleChange.bind(this);
@@ -47,18 +47,19 @@ constructor() {
    
 
     componentDidMount() {
-      //ngày mai trời có mưa không
+    	//ngày mai trời có mưa không
         // I will use fake api from jsonplaceholder website
         // this return 100 posts 
         //http://assistanthome.somee.com/api/assistant?request=ngày%20mai%20trời%20có%20mưa%20không
         // https://jsonplaceholder.typicode.com/posts
-
         fetch("http://assistanthome.somee.com/api/assistant?request=" + this.request)
         .then( response => response.json())
         .then(
             // handle the result
             (result) => {
-          
+
+              
+                this.voicetxt = result;
                 this.setState({
                     isLoaded : true,                
                     posts : result,
@@ -83,17 +84,14 @@ constructor() {
   }
    
   sendMessager() {
-
-         //alert(this.tts2)
-
          this.displayData.push(
-          <div>
-          <div class="ava_left">
-          
-          </div>
-          <div class="mes_left" id="display-data">{this.meMessage}</div>
+         	<div>
+         	<div class="ava_left">
+         	
+         	</div>
+         	<div class="mes_left" id="display-data">{this.state.postVal}</div>
             </div>
-          );
+         	);
          this.setState({
             showdata : this.displayData,
             postVal : ""
@@ -101,51 +99,64 @@ constructor() {
       }
 
       BotResponse() {
- 
    {
-          
-      this.state.posts.map(post => (
-                          this.chuoi1 = post.Contend
-                        ))
 
+      this.voicetxt.map(post => (
+                           this.chuoi1 = post.Contend
+                         ))
    }
 
 this.displayData.push(
 
-          <div>
-          <div class="ava_right">
+         	<div>
+         	<div class="ava_right">
             <img  src={icon_assistant} alt={icon_assistant} width="100%" height="100%"/>
-          </div>
-          <div class="mes_right" id="display-data">{this.chuoi1}</div>
+         	</div>
+         	<div class="mes_right" id="display-data">{this.chuoi1}</div>
             </div>
 
          );
-        
+      	
          this.setState({
             showdata : this.displayData,
             postVal : ""
          });
       }
 
-     
+      RequestBot() {
+        this.sendMessager();
+      	this.request = this.state.postVal;
+      	setTimeout(this.componentDidMount, 1000);
+      	setTimeout(this.BotResponse, 2000);
+      }
+
    Responser() {
          this.displayData.push(
-          <div>
-          <div class="ava_right">
+         	<div>
+         	<div class="ava_right">
             <img  src={icon_assistant} alt={icon_assistant} width="100%" height="100%"/>
-          </div>
-          <div class="mes_right" id="display-data">Tôi là Bot</div>
+         	</div>
+         	<div class="mes_right" id="display-data">Tôi là Bot</div>
             </div>
-          );
+         	);
          this.setState({
             showdata : this.displayData,
             postVal : ""
          });
       }
+
+
+
+ handleChange(e) {
+      let getTextAreaValue = e.target.value;
+      this.setState({
+        postVal :getTextAreaValue
+      });
+}
 
 startDictation() {
 
-    
+
     window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
 
     let finalTranscript = '';
@@ -189,51 +200,16 @@ startDictation() {
 
 
      
-    this.meMessage = finalTranscript
-    this.request = finalTranscript
+    this.state.postVal = interimTranscript
       //document.querySelector('body').innerHTML = "finalTranscript" + '<i style="color:#ddd;">' + interimTranscript + '</>';
 
     }
 
     recognition.start();
    
-  
-  
-}
-   
-    
+    setTimeout(this.RequestBot, 3000);
 
-   
-   
-  
-
-    
- RequestBot() {
-        this.sendMessager();
-        this.request = this.state.postVal;
-        setTimeout(this.componentDidMount, 1000);
-        setTimeout(this.BotResponse, 2000);
-      }
-
-    
-
-      VoiceBot() {
-
-        this.startDictation();
-        
-        setTimeout(this.sendMessager, 4000);
-        //this.request = this.meMessage;
-        setTimeout(this.componentDidMount, 5000);
-        setTimeout(this.BotResponse, 6000);
-      }
-
- handleChange(e) {
-      let getTextAreaValue = e.target.value;
-      this.setState({
-        postVal :getTextAreaValue
-      });
-      this.meMessage = getTextAreaValue;
-}
+    }
 
 
  render(){
@@ -266,21 +242,21 @@ startDictation() {
 
   <div className="message_input_wrapper">
     <input value={this.state.postVal} onChange={this.handleChange} className="message_input" placeholder="Type your message here..."/>
+
   </div>
 
- <div onClick={this.VoiceBot} className="btn_voice">
-<img src={icon_voice} alt="Trulli" width="40" height="40"/>
-   </div>
-
+  
   <div className="send_message">
-    <div type="submit" className="text" onClick={this.RequestBot}   >Send</div>
+  
+  <div type="submit" className="text" onClick={this.RequestBot}   >Send</div>
+    
   </div>
 
+
+
 </div>
 
 </div>
-
-
 
 <div className="message_template">
 <li className="message">
