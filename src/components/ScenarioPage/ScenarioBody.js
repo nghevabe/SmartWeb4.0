@@ -20,16 +20,16 @@ class ScenarioBody extends React.Component{
 
     	         <div  class="w3-card-4">
 
-    	         <header class="w3-container w3-light-grey">
-    	         <h3>John Doe</h3>
+    	         <header id="header_scenario" class="w3-container">
+    	         <h3>Welcome</h3>
     	         </header>
 
-    	         <div  class="w3-container">
+    	         <div  class="container_scenario">
     
-    	         <p> Tran Hoang LinhXin chao toi ten la Tran Hoang LinhXin chao toi ten la Tran Hoang LinhXin chao toi ten la Tran Hoang Linh</p>
+    	         <p>Use when guests come to the house. The living room lights and door will automatically open</p>
     	         </div>
 
-    	         <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+    	         <button id="btn_scenario" class="w3-button w3-block"> Active </button>
 
     	         </div>
 
@@ -42,16 +42,16 @@ class ScenarioBody extends React.Component{
 
     	           <div  class="w3-card-4">
 
-    	         <header class="w3-container w3-light-grey">
-    	         <h3>John Doe</h3>
+    	         <header id="header_scenario" class="w3-container">
+    	         <h3>Relax</h3>
     	         </header>
 
-    	         <div  class="w3-container">
+    	         <div  class="container_scenario">
     
-    	         <p> Tran Hoang LinhXin chao toi ten la Tran Hoang LinhXin chao toi ten la Tran Hoang LinhXin chao toi ten la Tran Hoang Linh</p>
+    	         <p>Moderate lighting system,accompanied by music turned on to create a sense of relaxation</p>
     	         </div>
 
-    	         <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+    	         <button id="btn_scenario" class="w3-button w3-block"> Active </button>
 
     	         </div>
 
@@ -67,16 +67,16 @@ class ScenarioBody extends React.Component{
 
     	         <div  class="w3-card-4">
 
-    	         <header class="w3-container w3-light-grey">
-    	         <h3>John Doe</h3>
+    	         <header id="header_scenario" class="w3-container">
+    	         <h3>Sleeping</h3>
     	         </header>
 
-    	         <div  class="w3-container">
+    	         <div  class="container_scenario">
     
-    	         <p> Tran Hoang LinhXin chao toi ten la Tran Hoang LinhXin chao toi ten la Tran Hoang LinhXin chao toi ten la Tran Hoang Linh</p>
+    	         <p> Safe mode is set, the bedroom lights have a brightness that gradually reduces the feeling of falling asleep </p>
     	         </div>
 
-    	         <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+    	         <button id="btn_scenario" class="w3-button w3-block"> Active </button>
 
     	         </div>
 

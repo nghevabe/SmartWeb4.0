@@ -11,8 +11,23 @@ body {
 /* Remove extra left and right margins, due to padding */
 .row_scenario {
   margin-top: 5%;
-  
+}
 
+.container_scenario {
+
+ padding: 15px;
+ height: 120px;
+
+}
+
+#header_scenario {
+background-color: #008577;
+color: white;
+}
+
+#btn_scenario {
+background-color: #343a40;
+color: white;
 }
 
 /* Clear floats after the column_scenarios */
@@ -33,6 +48,13 @@ body {
   
 }
 
+.container_scenario {
+
+ padding: 15px;
+ height: 150px;
+
+}
+
 
 }
 
@@ -44,6 +66,14 @@ body {
   margin-left: 6%;
   padding: 0 10px;
   
+}
+
+.container_scenario {
+
+ padding: 12px;
+ height: 130px;
+ font-size:14px;
+
 }
 
 }
@@ -58,6 +88,12 @@ body {
    
 }
 
+.container_scenario {
+ padding: 10px;
+ font-size:12px;
+
+}
+
 }
 
 
@@ -70,7 +106,13 @@ body {
   }
 
   .row_scenario {
-  margin-top: -60px;
+  margin-top: 0px;
+
+ }
+
+.container_scenario {
+ padding: 10px;
+ font-size:15px;
 
 }
 
@@ -79,13 +121,14 @@ body {
 @media screen and (max-width: 481px) {
 
  .column_scenario {
+  width: 270px;
   float: left;
-  margin-left: 20%;
+  margin-left: 10%;
   padding: 0 10px;
 }
 
   .row_scenario {
-  margin-top: 0px;
+  margin-top: 60px;
 
 }
 
