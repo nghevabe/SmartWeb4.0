@@ -14,9 +14,9 @@ class ScenarioBody extends React.Component{
         
          
  
-    	<div class="row">
+    	<div  class="row_scenario">
 
-    	    <div class="column">
+    	    <div  class="column_scenario">
 
     	         <div  class="w3-card-4">
 
@@ -36,7 +36,7 @@ class ScenarioBody extends React.Component{
     	     </div>
 
 
-    	 <div class="column">
+    	 <div class="column_scenario">
 
     	         
 
@@ -61,7 +61,7 @@ class ScenarioBody extends React.Component{
 
 
 
-    	 <div class="column">
+    	 <div class="column_scenario">
 
     	      
 
@@ -81,6 +81,7 @@ class ScenarioBody extends React.Component{
     	         </div>
 
     	     </div>
+
 
 
     	</div>
