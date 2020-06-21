@@ -4,6 +4,7 @@ import Media from 'react-media';
 import  '../../css/card_scenario.css'; 
 import home_image from '../../image/home_image.png'
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import ScenarioBackground from './ScenarioBackground';
 
 
 class ScenarioBody extends React.Component{
@@ -12,7 +13,8 @@ class ScenarioBody extends React.Component{
 
     return (
         
-         
+        <div>
+         <ScenarioBackground/>
  
     	<div  class="row_scenario">
 
@@ -85,7 +87,7 @@ class ScenarioBody extends React.Component{
 
 
     	</div>
-  
+  </div>
 
     );
   }
