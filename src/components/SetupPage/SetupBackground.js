@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../Commons/Header';
 
-class ScenarioBackground extends Component{
+class SetupBackground extends Component{
 
+ 
 
  render(){
 
@@ -21,15 +22,20 @@ var bodyhead = {
 
 
 
+
   return (
+
 
   
    <div style={bodyhead}>
 
-         <h3>Choose Your Scenario</h3>
-  
+      <h3>Setup Your House</h3>
+
   </div>
 
+  
+
+  
 
 
   );
@@ -38,4 +44,4 @@ var bodyhead = {
 
 }
 
-export default ScenarioBackground;
+export default SetupBackground;
