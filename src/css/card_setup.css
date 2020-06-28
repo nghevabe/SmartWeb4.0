@@ -22,11 +22,13 @@ body {
 
 #header_setup {
 background-color: #008577;
+border-radius: 5px 5px 0px 0px;
 color: white;
 }
 
 #btn_setup {
 background-color: #343a40;
+border-radius: 0px 0px 5px 5px;
 color: white;
 }
 

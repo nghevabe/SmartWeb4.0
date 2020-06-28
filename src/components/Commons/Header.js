@@ -63,7 +63,15 @@ var head = {
               Device Controller
             </Link>
           </a>
-          </li>
+        </li>
+
+          <li>
+          <a style={{ color: 'white'}} >
+            <Link to="/login">
+              Login
+            </Link>
+          </a>
+        </li>
 
    			</ul>
    		

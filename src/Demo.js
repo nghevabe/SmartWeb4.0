@@ -17,6 +17,9 @@ import HouseDeviceDetailPage from './components/HouseControllerPage/HouseDeviceD
 import SetupBody from './components/SetupPage/SetupBody';
 import ScenarioBody from './components/ScenarioPage/ScenarioBody';
 
+import LoginForm from './components/AuthorityPage/LoginForm';
+import RegisterForm from './components/AuthorityPage/RegisterForm';
+
 function Demo() {
   return (
    
@@ -41,6 +44,8 @@ function Demo() {
             <Route path="/device" component={VoiceUI} />
             <Route path="/house-setup" component={SetupBody} />
             <Route path="/house-scenario" component={ScenarioBody} />
+            <Route path="/login" component={LoginForm} />
+            <Route path="/register" component={RegisterForm} />
           </div>
 
   <Footer/>

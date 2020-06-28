@@ -20,7 +20,7 @@ class ScenarioBody extends React.Component{
 
     	    <div  class="column_scenario">
 
-    	         <div  class="w3-card-4">
+    	         <div id="card_scenario"  class="w3-card-4">
 
     	         <header id="header_scenario" class="w3-container">
     	         <h3>Welcome</h3>
