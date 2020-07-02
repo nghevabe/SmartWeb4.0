@@ -21,6 +21,8 @@ import ScenarioBody from './components/ScenarioPage/ScenarioBody';
 import LoginForm from './components/AuthorityPage/LoginForm';
 import RegisterForm from './components/AuthorityPage/RegisterForm';
 
+import ProfileForm from './components/ProfilePage/ProfileForm';
+
 function Demo() {
   return (
    
@@ -47,6 +49,7 @@ function Demo() {
             <Route path="/house-scenario" component={ScenarioBody} />
             <Route path="/login" component={LoginForm} />
             <Route path="/register" component={RegisterForm} />
+            <Route path="/profile" component={ProfileForm} />
           </div>
 
   <Footer/>

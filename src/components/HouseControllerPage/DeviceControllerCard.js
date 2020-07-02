@@ -4,7 +4,6 @@ import Media from 'react-media';
 import ControllerDevice from './ControllerDevice';
 import '../../css/card_house_device.css';
 
-
 class DeviceControllerCard extends React.Component{
 
  render() {

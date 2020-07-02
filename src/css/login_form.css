@@ -14,13 +14,53 @@
   margin-top: -40px;
 }
 
+#profile {
+ padding-top: 15px;
+ margin-top: 0px;
+}
+
+#login {
+  padding-top: 45px;
+
+}
+
+.profile_title{
+padding-top: 15px;
+font-size: 25px;
+color: #008577;
+}
+
+.profile_username{
+padding-top: 15px;
+font-size: 18px;
+}
+
+.profile_fullname{
+padding-top: 15px;
+font-size: 18px;
+}
+
+.profile_mail{
+padding-top: 15px;
+font-size: 18px;
+}
+
+.profile_address{
+padding-top: 15px;
+padding-bottom: 30px;
+font-size: 18px;
+}
+
 .form {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
-  padding: 45px;
+  margin-top: 32px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
@@ -116,4 +156,9 @@ body {
   margin: auto;
 }
 
+ .register-page {
+  width: 280px;
+  padding: 8% 0 0;
+  margin: auto;
+}
 }
