@@ -8,6 +8,8 @@ class ChatUI extends Component{
 constructor() {
       super();
 
+      this.base_ulr = "http://www.assistanthome.somee.com/api/assistant?request=";
+
       this.displayData = [];
       this.chuoi1 = "";
       this.request = "";
@@ -53,7 +55,7 @@ constructor() {
         //http://assistanthome.somee.com/api/assistant?request=ngày%20mai%20trời%20có%20mưa%20không
         // https://jsonplaceholder.typicode.com/posts
 
-        fetch("http://assistanthome.somee.com/api/assistant?request=" + this.request)
+        fetch(this.base_ulr + this.request)
         .then( response => response.json())
         .then(
             // handle the result
@@ -77,7 +79,7 @@ constructor() {
     }
 
     componentDidMount2() {
-    fetch("http://assistanthome.somee.com/api/assistant?request=" + this.request)
+    fetch(this.base_ulr + this.request)
       .then(response => response.json())
       .then(data => this.setState({ data }));
   }

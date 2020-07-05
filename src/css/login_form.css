@@ -16,12 +16,15 @@
 
 #profile {
  padding-top: 15px;
- margin-top: 0px;
+ margin-top: -30px;
 }
 
 #login {
   padding-top: 45px;
+}
 
+#register {
+  padding-top: 45px;
 }
 
 .profile_title{
@@ -46,6 +49,16 @@ font-size: 18px;
 }
 
 .profile_address{
+padding-top: 15px;
+font-size: 18px;
+}
+
+.profile_house_device{
+padding-top: 15px;
+font-size: 18px;
+}
+
+.profile_removable_device{
 padding-top: 15px;
 padding-bottom: 30px;
 font-size: 18px;
@@ -150,6 +163,11 @@ body {
 
 @media screen and (max-width: 481px) {
 
+#profile {
+ margin-top: 20px;
+}
+
+
  .login-page {
   width: 280px;
   padding: 8% 0 0;
@@ -161,4 +179,42 @@ body {
   padding: 8% 0 0;
   margin: auto;
 }
+
+.profile_title{
+padding-top: 15px;
+font-size: 18px;
+color: #008577;
+}
+
+.profile_username{
+padding-top: 15px;
+font-size: 13px;
+}
+
+.profile_fullname{
+padding-top: 15px;
+font-size: 13px;
+}
+
+.profile_mail{
+padding-top: 15px;
+font-size: 13px;
+}
+
+.profile_address{
+padding-top: 15px;
+font-size: 13px;
+}
+
+.profile_house_device{
+padding-top: 15px;
+font-size: 13px;
+}
+
+.profile_removable_device{
+padding-top: 15px;
+padding-bottom: 30px;
+font-size: 13px;
+}
+
 }

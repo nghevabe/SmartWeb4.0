@@ -15,7 +15,7 @@ class RegisterForm extends React.Component{
         <div class="register-page">
   <div class="form">
 
-    <form class="login-form">
+    <form id="register" class="login-form">
       <input type="text" placeholder="name"/>
       <input type="password" placeholder="password"/>
       
