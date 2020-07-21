@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../css/chat_css.css';
 import icon_assistant from '../../image/qoobee.png'
 import icon_voice from '../../image/voice_icon.png'
+import axios from 'axios';
 
 class ChatUI extends Component{
 
@@ -35,6 +36,7 @@ constructor() {
       
       
       this.handleChange = this.handleChange.bind(this);
+     
 
     };
 
@@ -204,11 +206,6 @@ startDictation() {
 }
    
     
-
-   
-   
-  
-
     
  RequestBot() {
         this.sendMessager();
@@ -228,6 +225,7 @@ startDictation() {
         setTimeout(this.componentDidMount, 5000);
         setTimeout(this.BotResponse, 6000);
       }
+
 
  handleChange(e) {
       let getTextAreaValue = e.target.value;
