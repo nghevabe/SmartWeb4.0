@@ -15,115 +15,116 @@ class LoginForm extends React.Component{
       this.myLogin = this.myLogin.bind(this);
       this.getUserList = this.getUserList.bind(this);
       this.getUserById = this.getUserById.bind(this);
-    
+      this.getUserNameValue = this.getUserNameValue.bind(this);
+      this.getPasswordValue = this.getPasswordValue.bind(this);
+
+      this.username = "";
+      this.password = "";
+
+      
   }
 
   getUserById() {
 
-axios({
-  method: 'get',
-  url: 'http://localhost:8080/rest/users/100',
-  headers: {
-    'Authorization': `eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU0MzA3MzksInVzZXJuYW1lIjoibmdoZXZhYmUifQ.PmIZEN8Idv7FxRrsvmF5LpIaBIvHzzxeL6b3bmQ9HbM`
-  }, 
-}).then(res => {
-        console.log(res.data.username)
-      })
-     
+    axios({
+      method: 'get',
+      url: 'http://localhost:8080/rest/users/100',
+      headers: {
+        'Authorization': `eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU0MzA3MzksInVzZXJuYW1lIjoibmdoZXZhYmUifQ.PmIZEN8Idv7FxRrsvmF5LpIaBIvHzzxeL6b3bmQ9HbM`
+      }, 
+    }).then(res => {
+      console.log(res.data.username)
+    })
+
 
   }
 
 
   getUserList() {
 
-axios({
-  method: 'get',
-  url: 'http://localhost:8080/rest/users',
-  headers: {
-    'Authorization': `eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU0MzA3MzksInVzZXJuYW1lIjoibmdoZXZhYmUifQ.PmIZEN8Idv7FxRrsvmF5LpIaBIvHzzxeL6b3bmQ9HbM`
-  }, 
-}).then(res => {
-  var kq = res.data;
+    axios({
+      method: 'get',
+      url: 'http://localhost:8080/rest/users',
+      headers: {
+        'Authorization': `eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU0MzA3MzksInVzZXJuYW1lIjoibmdoZXZhYmUifQ.PmIZEN8Idv7FxRrsvmF5LpIaBIvHzzxeL6b3bmQ9HbM`
+      }, 
+    }).then(res => {
+      var kq = res.data;
 
-        kq.map(post => (
-                          console.log(post.username)
-                        ))
+      kq.map(post => (
+        console.log(post.username)
+        ))
 
        // console.log(res.data)
-      })
-     
+     })
+
 
   }
 
   myLogin() {
-           
+
 //eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU0MzA3MzksInVzZXJuYW1lIjoibmdoZXZhYmUifQ.PmIZEN8Idv7FxRrsvmF5LpIaBIvHzzxeL6b3bmQ9HbM
-         axios({
+axios({
   method: 'post',
   url: 'http://localhost:8080/rest/login',
   headers: {}, 
   data: {
-    username: 'nghevabe',
-    password: '123', // This is the body part
+    username: this.username,
+    password: this.password, // This is the body part
   }
 }).then(res => {
 
+  document.getElementById("errorText").innerHTML = "";
+  alert('Login Successful !')
 
+})
+.catch(e =>{ 
 
-        console.log(res.data)
-      })
-      .catch(e => console.log(e))
+  if(e.response)
+  {
+      document.getElementById("errorText").innerHTML = "* " + e.response.data;
+  }
 
-      }
+})
+}
 
- render() {
+    getUserNameValue(e) {
+      let getTextAreaValue = e.target.value;
+      this.username = getTextAreaValue;
+}
 
-    return (
-        
-        <div class="login-page">
-  <div class="form">
-    
+    getPasswordValue(e) {
+      let getTextAreaValue = e.target.value;
+      this.password = getTextAreaValue;
+}
+
+render() {
+
+  return (
+
+    <div class="login-page">
+    <div class="form">
+    <div id="errorText" class="labelError"></div>
     <form id="login" class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <div class="btn_login" type="submit" onClick={this.getUserList}>login</div>
-      <p class="message">Not registered?
- <Link to="/register">
-             
-       <a href="#">Create an account</a>
+    <input  onChange={this.getUserNameValue} type="text" placeholder="username"/>
+    <input  onChange={this.getPasswordValue} type="password" placeholder="password"/>
+    <div class="btn_login" type="submit" onClick={this.myLogin}>login</div>
+    <p class="message">Not registered?
+    <Link to="/register">
 
- </Link>
-       </p>
+    <a href="#">Create an account</a>
+
+    </Link>
+    </p>
     </form>
 
-  </div>
-</div>
+    </div>
+    </div>
 
     );
-  }
+}
 
 
 }
 
 export default LoginForm;
- /*
-    axios.get('http://localhost:8080/rest/users/100', {
-      params: {
-        token: 'eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTUzNTEyMDMsInVzZXJuYW1lIjoibmdoZXZhYmUifQ.wXoccec_PqUg1f4lUgVfHKRo_hiRQNQ2EFuEgFg8D3g'
-      }
-    })
-      .then(res => {
-        console.log(res)
-      })
-      .catch(e => console.log(e))
-      */
-
-/*
-    axios.get('http://dummy.restapiexample.com/api/v1/employee/1', {
-    
-    })
-      .then(res => {
-        console.log(res)
-      })
-      .catch(e => console.log(e))
-*/
