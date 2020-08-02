@@ -7,12 +7,15 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "history": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-media": "^1.10.0",
+    "react-router": "^3.2.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-speech-recognition": "^2.0.4"
+    "react-speech-recognition": "^2.0.4",
+    "universal-cookie": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

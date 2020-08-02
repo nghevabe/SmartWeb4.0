@@ -2,11 +2,19 @@
 import React, { Fragment } from 'react';
 import Media from 'react-media';
 import  '../../css/login_form.css'; 
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Redirect, withRouter } from "react-router-dom";
+import { browserHistory } from 'react-router';
 import axios from 'axios';
+
+import Cookies from 'universal-cookie';
+
+import { useHistory } from "react-router-dom";
+
+import Header from '../Commons/Header';
 
 
 class LoginForm extends React.Component{
+
 
   constructor(props) {
 
@@ -18,10 +26,19 @@ class LoginForm extends React.Component{
       this.getUserNameValue = this.getUserNameValue.bind(this);
       this.getPasswordValue = this.getPasswordValue.bind(this);
 
+      this.passData = this.passData.bind(this);
+      this.myPush = this.myPush.bind(this);
+
       this.username = "";
       this.password = "";
 
-      
+  }
+
+  passData() {
+
+   
+   this.props.filterUser('NGHEVABE')
+
   }
 
   getUserById() {
@@ -61,9 +78,20 @@ class LoginForm extends React.Component{
 
   }
 
+  myPush() {
+
+   const cookies = new Cookies();
+   cookies.set('xxx', 'LINH TRAN OI', { path: '/' });
+
+  }
+
   myLogin() {
 
 //eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1OTU0MzA3MzksInVzZXJuYW1lIjoibmdoZXZhYmUifQ.PmIZEN8Idv7FxRrsvmF5LpIaBIvHzzxeL6b3bmQ9HbM
+
+const cookies = new Cookies();
+   cookies.set('token', 'none', { path: '/' });
+
 axios({
   method: 'post',
   url: 'http://localhost:8080/rest/login',
@@ -75,7 +103,15 @@ axios({
 }).then(res => {
 
   document.getElementById("errorText").innerHTML = "";
-  alert('Login Successful !')
+
+ // this.props.filterUser(this.username)
+
+   const cookies = new Cookies();
+   cookies.set('token', res.data, { path: '/' });
+   alert('Login Successful')
+
+   this.props.history.push("/");
+   window.location.reload(false);
 
 })
 .catch(e =>{ 
@@ -86,6 +122,9 @@ axios({
   }
 
 })
+
+
+
 }
 
     getUserNameValue(e) {
@@ -108,7 +147,9 @@ render() {
     <form id="login" class="login-form">
     <input  onChange={this.getUserNameValue} type="text" placeholder="username"/>
     <input  onChange={this.getPasswordValue} type="password" placeholder="password"/>
+
     <div class="btn_login" type="submit" onClick={this.myLogin}>login</div>
+
     <p class="message">Not registered?
     <Link to="/register">
 

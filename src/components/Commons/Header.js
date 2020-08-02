@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
+import Cookies from 'universal-cookie';
+
+import LoginForm from '../AuthorityPage/LoginForm';
+
 class Header extends Component{
 
+//static token = 'XXX'
 
+ handleInputValue(val) {
+    this.setState({ inputVal: val });
+  }
 
  render(){
 
@@ -65,12 +73,38 @@ var head = {
           </a>
         </li>
 
+         
+
           <li>
-          <a style={{ color: 'white'}} >
+
+ {(() => {
+          
+const cookies = new Cookies();
+if(cookies.get('token') != 'none')
+{
+  return (
+     <a style={{ color: 'white'}} >
+            <Link to="/profile">
+              Profile 
+            </Link>
+          </a>
+    )
+} else{
+  return (
+     <a style={{ color: 'white'}} >
             <Link to="/login">
               Login
             </Link>
           </a>
+
+    )
+}
+
+      })()}
+
+         
+
+
         </li>
 
    			</ul>

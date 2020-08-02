@@ -4,6 +4,7 @@ import icon_house from '../../image/house_icon.png'
 import icon_device from '../../image/device_icon.png'
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
+import LoginForm from '../AuthorityPage/LoginForm';
 
 
 class HomeBody extends Component{
