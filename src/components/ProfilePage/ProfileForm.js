@@ -28,6 +28,8 @@ class ProfileForm extends React.Component{
   getUserDetail() {
 
    const token = cookies.get('token')
+
+   //alert(token)
   
     axios({
       method: 'get',
@@ -36,6 +38,8 @@ class ProfileForm extends React.Component{
         'Authorization': token
       }, 
     }).then(res => {
+
+        
 
       this.setState({
           userName: res.data.username,
@@ -47,7 +51,17 @@ class ProfileForm extends React.Component{
 
       
 
-    })
+    }).catch(e =>{ 
+
+  if(e.response)
+  {
+     cookies.set('token', 'none', { path: '/' });
+     alert('You Not Login');
+     this.props.history.push("/");
+     window.location.reload(false);
+  }
+
+})
 
   }
 

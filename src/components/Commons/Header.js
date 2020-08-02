@@ -80,7 +80,8 @@ var head = {
  {(() => {
           
 const cookies = new Cookies();
-if(cookies.get('token') != 'none')
+var stringToken = cookies.get('token')
+if(stringToken.length > 20)
 {
   return (
      <a style={{ color: 'white'}} >
