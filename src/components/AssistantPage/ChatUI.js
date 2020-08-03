@@ -32,7 +32,7 @@ constructor() {
       this.startDictation = this.startDictation.bind(this);
       this.VoiceBot = this.VoiceBot.bind(this);
       this.RequestBot = this.RequestBot.bind(this);
-      this.componentDidMount = this.componentDidMount.bind(this);
+      this.getRequestApi = this.getRequestApi.bind(this);
       
       
       this.handleChange = this.handleChange.bind(this);
@@ -50,7 +50,7 @@ constructor() {
 
    
 
-    componentDidMount() {
+    getRequestApi() {
       //ngày mai trời có mưa không
         // I will use fake api from jsonplaceholder website
         // this return 100 posts 
@@ -80,7 +80,7 @@ constructor() {
         )
     }
 
-    componentDidMount2() {
+    getRequestApi2() {
     fetch(this.base_ulr + this.request)
       .then(response => response.json())
       .then(data => this.setState({ data }));
@@ -210,7 +210,7 @@ startDictation() {
  RequestBot() {
         this.sendMessager();
         this.request = this.state.postVal;
-        setTimeout(this.componentDidMount, 1000);
+        setTimeout(this.getRequestApi, 1000);
         setTimeout(this.BotResponse, 2000);
       }
 
@@ -222,7 +222,7 @@ startDictation() {
         
         setTimeout(this.sendMessager, 4000);
         //this.request = this.meMessage;
-        setTimeout(this.componentDidMount, 5000);
+        setTimeout(this.getRequestApi, 5000);
         setTimeout(this.BotResponse, 6000);
       }
 

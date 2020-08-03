@@ -17,15 +17,11 @@ class ProfileForm extends React.Component{
     super(props);
 
       this.logOut = this.logOut.bind(this);
-      this.getUserDetail = this.getUserDetail.bind(this);
-
       this.state = { userName: '', fullName: '', mail: '', address: '', phone: '' };
-
-      this.getUserDetail()
 
   }
 
-  getUserDetail() {
+  componentDidMount() {
 
    const token = cookies.get('token')
 

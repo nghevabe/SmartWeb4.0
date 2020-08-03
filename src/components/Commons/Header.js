@@ -81,24 +81,39 @@ var head = {
           
 const cookies = new Cookies();
 var stringToken = cookies.get('token')
-if(stringToken.length > 20)
-{
-  return (
-     <a style={{ color: 'white'}} >
-            <Link to="/profile">
-              Profile 
-            </Link>
-          </a>
-    )
-} else{
-  return (
-     <a style={{ color: 'white'}} >
-            <Link to="/login">
-              Login
-            </Link>
-          </a>
 
-    )
+if(stringToken != null){
+
+  if(stringToken.length > 20)
+  {
+    return (
+     <a style={{ color: 'white'}} >
+     <Link to="/profile">
+     Profile 
+     </Link>
+     </a>
+     )
+  } else{
+    return (
+     <a style={{ color: 'white'}} >
+     <Link to="/login">
+     Login
+     </Link>
+     </a>
+
+     )
+  }
+} else {
+
+   return (
+     <a style={{ color: 'white'}} >
+     <Link to="/login">
+     Login
+     </Link>
+     </a>
+
+     )
+
 }
 
       })()}
