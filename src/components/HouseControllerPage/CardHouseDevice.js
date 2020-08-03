@@ -29,7 +29,7 @@ class CardHouseDevice extends React.Component{
       {(() => {
 
 
-        if (this.props.type_device == "light") {
+        if (this.props.type_device == "Light") {
 
           return (
              <img src={img_led_icon}  width="50%"/>
@@ -37,7 +37,7 @@ class CardHouseDevice extends React.Component{
 
         } 
 
-        if (this.props.type_device == "fan") {
+        if (this.props.type_device == "Fan") {
 
           return (
             <img src={img_fan_icon}  width="50%"/>
@@ -45,7 +45,7 @@ class CardHouseDevice extends React.Component{
           
         } 
 
-         if (this.props.type_device == "glass") {
+         if (this.props.type_device == "Glass") {
 
           return (
             <img src={img_glass_icon}  width="50%"/>
@@ -53,7 +53,7 @@ class CardHouseDevice extends React.Component{
           
         } 
 
-         if (this.props.type_device == "door") {
+         if (this.props.type_device == "Door") {
 
           return (
             <img src={img_door_icon}  width="50%"/>

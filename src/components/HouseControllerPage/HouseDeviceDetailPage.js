@@ -120,7 +120,7 @@ constructor(props) {
     {(() => {
                //alert(this.state.valueType)
 
-        if (this.state.valueType == "light") {
+        if (this.state.valueType == "Light") {
 
           return (
               <div class="box_color">
@@ -136,7 +136,7 @@ constructor(props) {
 
         } 
 
-          if (this.state.valueType == "fan") {
+          if (this.state.valueType == "Fan") {
 
           return (
              <div class="slider_container">
@@ -147,7 +147,7 @@ constructor(props) {
         } 
 
 
-        if (this.state.valueType == "glass") {
+        if (this.state.valueType == "Glass") {
 
           return (
              <div class="slider_container">
@@ -158,7 +158,7 @@ constructor(props) {
         } 
 
 
-        if (this.state.valueType == "door") {
+        if (this.state.valueType == "Door") {
 
           return (
              <div class="slider_container">

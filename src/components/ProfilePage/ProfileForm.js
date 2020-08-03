@@ -25,45 +25,39 @@ class ProfileForm extends React.Component{
 
    const token = cookies.get('token')
 
-   //alert(token)
-  
-    axios({
-      method: 'get',
-      url: 'http://localhost:8080/rest/user_detail',
-      headers: {
-        'Authorization': token
-      }, 
-    }).then(res => {
+   axios({
+    method: 'get',
+    url: 'http://localhost:8080/rest/user_detail',
+    headers: {
+      'Authorization': token
+    }, 
+  }).then(res => {
 
-        
+    this.setState({
+      userName: res.data.username,
+      fullName: res.data.fullname,
+      mail: res.data.mail,
+      address: res.data.address,
+      phone: res.data.phone,
+    });
 
-      this.setState({
-          userName: res.data.username,
-          fullName: res.data.fullname,
-          mail: res.data.mail,
-          address: res.data.address,
-          phone: res.data.phone,
-      });
 
-      
+  }).catch(e =>{ 
 
-    }).catch(e =>{ 
-
-  if(e.response)
-  {
+    if(e.response)
+    {
      cookies.set('token', 'none', { path: '/' });
      alert('You Not Login');
      this.props.history.push("/");
      window.location.reload(false);
-  }
+   }
 
-})
+ })
 
-  }
+}
 
   logOut() {
 
-    
     cookies.set('token', 'none', { path: '/' });
 
     this.props.history.push("/");

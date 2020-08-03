@@ -5,97 +5,68 @@ import styles from '../../css/cardstyle.css';
 import CardData from './CardData';
 import CardHouseDevice from './CardHouseDevice';
 import '../../css/table_item.css';
+import axios from 'axios';
+import Cookies from 'universal-cookie';
 
-
+const cookies = new Cookies();
 
 class HouseTableDevice extends React.Component{
 
    constructor(props) {
     super(props);
  
-    this.state = {
-     
-        lstDevice: [        
-  { nodeId: 1, name: "Bed Room Light", type: "light" },        
-  { nodeId: 2, name: "Living Room Light", type: "light" },        
-  { nodeId: 3, name: "Kitchen Light", type: "light" }, 
-  { nodeId: 4, name: "Bed Room Fan", type: "fan" },   
-  { nodeId: 5, name: "Air System Fan", type: "fan" },  
-  { nodeId: 7, name: "Electro Glass", type: "glass" },  
-  { nodeId: 8, name: "Door", type: "door" }        
-],
-
+    this.state = {   
+       listDevice: [ ],
     };
+
+  }
+
+  componentDidMount() {
+
+    const token = cookies.get('token')
+
+    axios({
+      method: 'get',
+      url: 'http://localhost:8080/rest/house_devices',
+      headers: {
+        'Authorization': token
+      }, 
+    }).then(res => {
+      var listItem = res.data;
+
+      this.setState({
+       listDevice: listItem
+     })
+
+    })
+
   }
 
  render() {
 
-
-
-
-
     return (
      
-      
- 
+      <div>
+
+      <div class="row">
 
 
-<div class="row">
 
-    {this.state.lstDevice.map(item => (
+      {this.state.listDevice.map(item => (
 
-             <div class="column">
-             
-                  <CardHouseDevice id_device={item.nodeId} name_device={item.name} type_device={item.type}/>
+       <div class="column">
 
-            </div>
+       <CardHouseDevice id_device={item.id} name_device={item.name} type_device={item.type}/>
 
-          ))}
-   
+       </div>
 
-{/* 
-   <div class="column">
-
-       <CardHouseDevice/>
-
-     </div>
+       ))}
 
 
-     <div class="column">
 
-       <CardHouseDevice/>
+      </div>
 
-     </div>
-
-
-     <div class="column">
-
-       <CardHouseDevice/>
-
-     </div>
-
-     <div class="column">
-
-       <CardHouseDevice/>
-
-     </div>
-
-     <div class="column">
-
-       <CardHouseDevice/>
-
-     </div>
-
-     <div class="column">
-
-       <CardHouseDevice/>
-
-     </div>
-*/}  
-
-</div>
-
-
+      </div>
 
     );
   }
