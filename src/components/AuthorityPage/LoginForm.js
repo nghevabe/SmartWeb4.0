@@ -12,6 +12,8 @@ import { useHistory } from "react-router-dom";
 
 import Header from '../Commons/Header';
 
+import { Configs } from '../../common/Configs';
+
 
 class LoginForm extends React.Component{
 
@@ -94,7 +96,7 @@ const cookies = new Cookies();
 
 axios({
   method: 'post',
-  url: 'http://localhost:8080/rest/login',
+  url: Configs.api+'rest/login',
   headers: {}, 
   data: {
     username: this.username,
@@ -102,7 +104,7 @@ axios({
   }
 }).then(res => {
 
-  document.getElementById("errorText").innerHTML = "";
+   document.getElementById("errorText").innerHTML = "";
 
  // this.props.filterUser(this.username)
 

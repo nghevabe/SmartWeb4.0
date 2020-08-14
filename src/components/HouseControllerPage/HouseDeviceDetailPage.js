@@ -4,6 +4,16 @@ import DeviceControllerCard from './DeviceControllerCard';
 import '../../css/dot_color.css';
 import '../../css/seek_bar.css';
 
+import { Configs } from '../../common/Configs';
+import Cookies from 'universal-cookie';
+
+import axios from 'axios';
+
+const cookies = new Cookies();
+const token = cookies.get('token')
+
+// http://localhost:3000/house-detail-device?id=505&name=LED%20Bed%20Room&type=Light
+
 class HouseDeviceDetailPage extends Component{
 
 constructor(props) {
@@ -15,7 +25,12 @@ constructor(props) {
     this.state = {
         valueName: this.getDecodeString(parameterName),
         valueType: this.getQueryParameter('type'),
+        valueId: this.getQueryParameter('id'),
     };
+
+    this.valueSignal = "ON";
+    this.valueColor = "RED";
+    this.valuePower = 50;
 
     this.getQueryParameter = this.getQueryParameter.bind(this);
     this.getDecodeString = this.getDecodeString.bind(this);
@@ -27,7 +42,12 @@ constructor(props) {
     this.turnVioletLight = this.turnVioletLight.bind(this);
     this.turnAquaLight = this.turnAquaLight.bind(this);
     this.turnWhiteLight = this.turnWhiteLight.bind(this);
+    this.turnOn = this.turnOn.bind(this);
+    this.turnOff = this.turnOff.bind(this);
+
   }
+
+
 
    getQueryParameter(variable)
 {
@@ -59,7 +79,48 @@ constructor(props) {
          return chuoi;
     }
 
+
+        publishMessage = () => {
+
+           axios({
+        		method: 'post',
+        		url: Configs.api+'rest/publish_signal/'+this.state.valueId+'?signal=' + this.valueSignal 
+        		+ "&lightColor=" + this.valueColor+"&power="+this.valuePower,
+        		headers: {
+               'Authorization': token
+            }, 
+        	}).then(res => {
+        		alert(this.valueSignal)
+        	})
+        	.catch(e =>{ 
+        		if(e.response) {
+               alert("FAIL")
+        		}
+        	})
+
+        }
+
+        turnOn() {
+        	this.valueSignal = "ON"
+        	this.valueColor = "WHITE"
+        	this.valuePower = 100
+        	this.publishMessage()
+        }
+
+
+       turnOff() {
+    	    this.valueSignal = "OFF"
+        	this.valueColor = "WHITE"
+        	this.valuePower = 100
+        	this.publishMessage()
+       }
+
       turnRedLight() {
+           this.valueSignal = "ON"
+        	 this.valueColor = "RED"
+        	 this.valuePower = 100
+        	 this.publishMessage()
+
            this.setState({
            lightColor :'#f15f66',
            border : '2px solid #f15f66'
@@ -67,6 +128,11 @@ constructor(props) {
       }
 
       turnGreenLight() {
+        this.valueSignal = "ON"
+        this.valueColor = "GREEN"
+        this.valuePower = 100
+        this.publishMessage()
+
         this.setState({
            lightColor :'#51ffa9',
            border : '2px solid #51ffa9'
@@ -74,6 +140,11 @@ constructor(props) {
       }
 
       turnBlueLight() {
+        this.valueSignal = "ON"
+        this.valueColor = "BLUE"
+        this.valuePower = 100
+        this.publishMessage()
+
         this.setState({
            lightColor :'#3380cb',
            border : '2px solid #3380cb'
@@ -81,6 +152,11 @@ constructor(props) {
       }
 
       turnYellowLight() {
+        this.valueSignal = "ON"
+        this.valueColor = "YELLOW"
+        this.valuePower = 100
+        this.publishMessage()
+
         this.setState({
            lightColor :'#ffba51',
            border : '2px solid #ffba51'
@@ -88,6 +164,11 @@ constructor(props) {
       }
 
       turnVioletLight() {
+        this.valueSignal = "ON"
+        this.valueColor = "VIOLET"
+        this.valuePower = 100
+        this.publishMessage()
+
         this.setState({
            lightColor :'#cc33ff',
            border : '2px solid #cc33ff'
@@ -95,6 +176,11 @@ constructor(props) {
       }
 
       turnAquaLight() {
+        this.valueSignal = "ON"
+        this.valueColor = "AQUA"
+        this.valuePower = 100
+        this.publishMessage()
+
         this.setState({
            lightColor :'#a8d4ff',
            border : '2px solid #a8d4ff'
@@ -102,6 +188,11 @@ constructor(props) {
       }
 
       turnWhiteLight() {
+        this.valueSignal = "ON"
+        this.valueColor = "WHITE"
+        this.valuePower = 100
+        this.publishMessage()
+
         this.setState({
            lightColor :'white',
            border : '2px solid white'
@@ -173,8 +264,23 @@ constructor(props) {
   </div>
 
 
+  <div class="card_house_device_controller">
+      
+      
+      <div  class="card_blockup">
 
-  <DeviceControllerCard nameDevice={this.state.valueName}/>
+      <font  size="5">{this.state.valueName}</font>
+
+      </div>
+      <div class="card_blockdown">
+
+      <div  id="card_button_left" class="btn btn-primary" onClick={this.turnOn}>ON</div> 
+      <div  id="card_button_right"  class="btn btn-primary" onClick={this.turnOff}>OFF</div> 
+
+      </div>
+      
+      
+      </div>
 
   </div>
 

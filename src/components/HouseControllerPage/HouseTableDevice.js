@@ -16,6 +16,25 @@ class HouseTableDevice extends React.Component{
     super(props);
  
     this.state = {   
+
+ lstDevice: [        
+
+  { nodeId: 1, name: "Bed Room Light", type: "Light" },        
+
+  { nodeId: 2, name: "Living Room Light", type: "Light" },        
+
+  { nodeId: 3, name: "Kitchen Light", type: "Light" }, 
+
+  { nodeId: 4, name: "Bed Room Fan", type: "Fan" },   
+
+  { nodeId: 5, name: "Air System Fan", type: "Fan" },  
+
+  { nodeId: 7, name: "Electro Glass", type: "Glass" },  
+
+  { nodeId: 8, name: "Door", type: "Door" }        
+
+],
+
        listDevice: [ ],
     };
 

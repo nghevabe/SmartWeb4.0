@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import axios from 'axios';
 
 import Cookies from 'universal-cookie';
+import { Configs } from '../../common/Configs';
 
 const cookies = new Cookies();
 
@@ -27,7 +28,7 @@ class ProfileForm extends React.Component{
 
    axios({
     method: 'get',
-    url: 'http://localhost:8080/rest/user_detail',
+    url: Configs.api+'rest/user_detail',
     headers: {
       'Authorization': token
     }, 
