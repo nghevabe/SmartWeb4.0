@@ -237,6 +237,15 @@ constructor(props) {
 
         } 
 
+         if (this.state.valueType == "Purifier") {
+
+          return (
+             <div class="slider_container">
+               <input type="range" min="1" max="100"  class="slider" />
+             </div>
+          )
+
+        } 
 
         if (this.state.valueType == "Glass") {
 
